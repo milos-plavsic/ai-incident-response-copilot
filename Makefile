@@ -1,4 +1,4 @@
-.PHONY: install run api test docker-cli docker-api
+.PHONY: install run api test finetune docker-cli docker-api
 
 install:
 	python3 -m pip install -r requirements.txt
@@ -11,6 +11,9 @@ api:
 
 test:
 	python3 -m pytest -q
+
+finetune:
+	python3 -m finetune
 
 docker-cli:
 	docker compose run --rm app
