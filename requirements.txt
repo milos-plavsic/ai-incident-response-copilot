@@ -2,3 +2,6 @@ langgraph
 pandas
 scikit-learn
 python-dotenv
+pytest
+fastapi
+uvicorn[standard]

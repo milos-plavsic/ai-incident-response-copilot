@@ -14,5 +14,7 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Run starter pipeline
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Run CLI starter
         run: python app/main.py
