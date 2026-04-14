@@ -1,0 +1,11 @@
+services:
+  app:
+    image: python:3.11-slim
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    env_file:
+      - .env.example
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt &&
+             python app/main.py"
