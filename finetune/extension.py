@@ -1,7 +1,12 @@
 """Fine-tuning strategies for ops copilots (domain adapters, structured outputs)."""
 
+from ml_core import configure_logging
+
+logger = configure_logging(__name__)
+
 
 def describe_incident_llm_finetune_playbook() -> dict:
+    """Execute the describe incident llm finetune playbook routine."""
     return {
         "adapter_finetune": [
             "Train a small LoRA on internal postmortems → structured hypothesis JSON.",
@@ -15,9 +20,10 @@ def describe_incident_llm_finetune_playbook() -> dict:
 
 
 def main() -> None:
+    """Execute the main routine."""
     import json
 
-    print(json.dumps(describe_incident_llm_finetune_playbook(), indent=2))
+    logger.info(json.dumps(describe_incident_llm_finetune_playbook(), indent=2))
 
 
 if __name__ == "__main__":
