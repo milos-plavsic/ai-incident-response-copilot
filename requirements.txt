@@ -18,7 +18,7 @@ fastapi==0.110.0
 uvicorn[standard]==0.29.0
 
 # observability
-prometheus-client>=0.20.0
+prometheus-client>=0.25.0
 
 # Shared core package (canonical: https://github.com/milos-plavsic/ml-core)
 ml-core @ git+https://github.com/milos-plavsic/ml-core.git@v1.0.0
